@@ -225,42 +225,15 @@
         <div class="container">
             <h2 class="section-title">お問い合わせフォーム</h2>
 
-            <form class="form-container">
-                <div class="form-group">
-                    <label class="form-label" for="name">お名前（任意）</label>
-                    <input type="text" id="name" class="form-input" placeholder="例：一色 太郎">
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="phone">電話番号（必須）</label>
-                    <input type="tel" id="phone" class="form-input" required placeholder="例：090-1234-5678">
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="address">住所（町名まででOK）</label>
-                    <input type="text" id="address" class="form-input" placeholder="例：一色町前野">
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">相談内容</label>
-                    <select class="form-select">
-                        <option>ニオイが気になる</option>
-                        <option>清掃を頼みたい</option>
-                        <option>点検を頼みたい</option>
-                        <option>し尿くみ取り</option>
-                        <option selected>その他（自由記入）</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="message">詳細（自由記入）</label>
-                    <textarea id="message" class="form-textarea" placeholder="ご質問や詳細な状況をご記入ください"></textarea>
-                </div>
-
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary">状況を相談する（無料）</button>
-                </div>
-            </form>
+            <div class="text-center"
+                style="background: var(--white); padding: var(--spacing-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); max-width: 600px; margin: 0 auto;">
+                <p style="margin-bottom: var(--spacing-md); font-weight: bold;">Webからのお問い合わせはこちら</p>
+                <a href="#" class="btn btn-primary" style="min-width: 250px; font-size: 1.1rem;">
+                    お問い合わせフォーム（Googleフォーム）
+                </a>
+                <p style="margin-top: var(--spacing-sm); font-size: 0.9rem; color: var(--text-light);">※Googleフォームへ移動します
+                </p>
+            </div>
         </div>
     </section>
 
