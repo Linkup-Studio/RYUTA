@@ -149,6 +149,26 @@ img {
   font-size: 1.2rem;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo img {
+  max-height: 45px;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .header-content span:not(.header-icon) {
+    font-size: 0.9rem;
+  }
+  .header-logo img {
+      max-height: 35px;
+  }
+}
+
 /* 1. Hero Section */
 .hero {
   background: linear-gradient(180deg, var(--white) 0%, var(--primary-light) 100%);
