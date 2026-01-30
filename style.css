@@ -1,9 +1,11 @@
 :root {
   /* Color Palette - Premium & Trustworthy */
-  --primary: #0f4c81; /* Classic Blue - Trust, specialized */
+  --primary: #0f4c81;
+  /* Classic Blue - Trust, specialized */
   --primary-dark: #0a3d6b;
   --primary-light: #e6f0fa;
-  --accent: #00bcd4; /* Clean Cyan - Water, freshness */
+  --accent: #00bcd4;
+  /* Clean Cyan - Water, freshness */
   --accent-gradient: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
   --text-main: #333333;
   --text-light: #666666;
@@ -11,14 +13,14 @@
   --white: #ffffff;
   --success: #2e7d32;
   --warning: #f57f17;
-  
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 3rem;
   --spacing-xl: 5rem;
-  
+
   /* Shadows */
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
@@ -30,11 +32,14 @@
   --radius-full: 9999px;
 
   /* Typography */
-  --font-base: 'Helvetica Neue', Arial, sans-serif; /* Clean system fonts fallbacks */
+  --font-base: 'Helvetica Neue', Arial, sans-serif;
+  /* Clean system fonts fallbacks */
   --font-heading: 'Helvetica Neue', Arial, sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -49,7 +54,8 @@ body {
   color: var(--text-main);
   background-color: var(--bg-body);
   line-height: 1.6;
-  padding-top: 60px; /* Space for fixed header */
+  padding-top: 60px;
+  /* Space for fixed header */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -76,10 +82,21 @@ img {
   padding: 0 var(--spacing-sm);
 }
 
-.text-center { text-align: center; }
-.text-primary { color: var(--primary); }
-.text-accent { color: var(--accent); }
-.font-bold { font-weight: 700; }
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.font-bold {
+  font-weight: 700;
+}
 
 /* Components */
 .btn {
@@ -116,9 +133,17 @@ img {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(46, 125, 50, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 125, 50, 0);
+  }
 }
 
 /* 0. Fixed Header */
@@ -149,23 +174,61 @@ img {
   font-size: 1.2rem;
 }
 
+/* Header Flex Layout */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+  /* Ensure full height usage */
+}
+
+/* Logo Styling */
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  /* Allow shrinking if needed */
+  min-width: 0;
+  /* Allow flex item to shrink below content size */
+  margin-right: 8px;
 }
 
 .header-logo img {
-  max-height: 45px;
+  max-height: 40px;
+  /* Slightly reduced base size */
   width: auto;
+  max-width: 100%;
+  /* Prevent overflow */
+  object-fit: contain;
 }
 
+/* Header Content (Phone Button) */
+.header-content {
+  flex-shrink: 0;
+  /* Prevent phone button from shrinking */
+}
+
+/* Mobile Optimizations */
 @media (max-width: 600px) {
-  .header-content span:not(.header-icon) {
-    font-size: 0.9rem;
+  .header-text-desktop {
+    display: none;
+    /* Hide verbose text */
   }
+
   .header-logo img {
-      max-height: 35px;
+    max-height: 32px;
+    /* Smaller logo on mobile */
+  }
+
+  .btn-mobile-call {
+    font-size: 0.9rem !important;
+    padding: 6px 10px !important;
+  }
+
+  .container {
+    padding: 0 12px;
+    /* Slightly tighter padding on mobile */
   }
 }
 
@@ -466,7 +529,9 @@ img {
   font-size: 0.9rem;
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input,
+.form-select,
+.form-textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
@@ -495,7 +560,17 @@ img {
 
 /* Responsive */
 @media (min-width: 768px) {
-  .hero-title { font-size: 2.2rem; }
-  .problems-list { grid-template-columns: 1fr 1fr; max-width: 800px; }
-  .reasons-grid { grid-template-columns: repeat(3, 1fr); max-width: 1000px; }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .problems-list {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+  }
 }
